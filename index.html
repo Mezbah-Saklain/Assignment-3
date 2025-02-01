@@ -25,6 +25,20 @@
             font-family: "Poppins", serif;
             ;
         }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .animate-fade-in {
+            animation: fadeIn 2s ease-in-out infinite;
+        }
     </style>
 </head>
 
@@ -53,8 +67,8 @@
         </nav>
         <!-- Banner -->
         <div class="flex flex-col items-center justify-center  px-4 lg:px-36">
-            <h2 class="text-4xl font-bold text-center">
-                Freshness <span class="text-green-700">You Can <br>Count</span> On, Prices You’ll Love!
+            <h2 class="text-4xl font-bold text-center ">
+                Freshness <span class="text-green-700 animate-fade-in">You Can <br>Count</span> On, Prices You’ll Love!
             </h2>
             <p class="text-gray-500 text-center">
                 Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br>staples, we’ve got you
@@ -109,7 +123,7 @@
             </h1>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 px-4 lg:px-36 py-8 relative">
 
-                <div class="bg-linear-to-br from-green-500 to-green-50 rounded-lg p-14 h-100 relative">
+                <div class="bg-linear-to-br from-green-500 to-green-50 rounded-lg p-12 relative">
                     <h2 class="text-4xl font-bold text-left text-white">
                         30% Off
                     </h2>
@@ -119,8 +133,8 @@
                     <button class="bg-white text-xl px-6 py-3 rounded-md">
                         Buy Now
                     </button>
-                    <div class="absolute bottom-0 right-0 ">
-                        <img src="images/vegetable-offer.png" alt="">
+                    <div class="absolute -bottom-15 -right-18 lg:-bottom-3 lg:-right-5">
+                        <img src="images/vegetable-offer.png" class="transform scale-50 lg:transform lg:scale-90" alt="">
                     </div>
                 </div>
 
@@ -279,14 +293,93 @@
             </div>
         </section>
     </main>
-    <footer>
+
+    <section class="bg-green-50 py-12 mt-14">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-semibold text-green-700 mb-6">Nature's Platter Highlights</h2>
+          <p class="text-lg text-gray-600 mb-12">Explore our hand-picked dishes that connect you to nature’s finest offerings!</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dish 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3h-2v7H3v2h8v7h2v-7h8v-2h-8z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-700">Fresh Organic Salad</h3>
+              <p class="text-gray-500 mt-2">A healthy mix of the freshest organic greens, perfect for any meal.</p>
+            </div>
+      
+            <!-- Dish 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16m-7 4h7m-7 4h7"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-700">Vibrant Fruit Bowl</h3>
+              <p class="text-gray-500 mt-2">A mix of seasonal fruits, rich in vitamins and perfect for a refreshing snack.</p>
+            </div>
+      
+            <!-- Dish 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 10l5 5 5-5H7z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-green-700">Nature’s Smoothie</h3>
+              <p class="text-gray-500 mt-2">A blend of fresh fruits and greens for a rejuvenating experience.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+    <footer class=" bg-[#179800] lg:mt-80 mt-98 ">
         <!-- Subscribe -->
-        <section>
-
+        <section class="bg-[#F0EEE9] py-18 grid grid-cols-1 lg:grid-cols-2  items-center px-4 lg:px-36 w-[78%] rounded-3xl mx-auto translate-y-[-50%]">
+            
+            <div>
+                <img src="images/vegetable-busket.png" alt="">
+            </div>
+            <div class="flex flex-col gap-6 items-center lg:items-start">
+                <h1 class="text-4xl font-bold ">
+                    Get Grocery News!
+                </h1>
+                <p>
+                    Exclusive training tips, ticks, product deals and more.
+                </p>
+                <input type="text" placeholder="Enter email"
+                    class="bg-white w-[100%] py-4 px-4 rounded-md">
+                <button class="bg-[#179800] text-white px-4 py-2 rounded-md w-1/2 ">
+                    Subscribe
+                </button>
+            </div>
         </section>
-        <!-- About -->
-        <section>
-
+        <!-- Socials -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 lg:items-center py-18 px-4 lg:px-36 items-start translate-y-[-25%] ">
+            <div class="mb-10">
+                <img src="images/logo-footer.png" alt=""> 
+                <p class="text-white py-6">
+                    Discover a world of treats, toys, and <br>essentials handpicked for your furry <br>friends
+                </p>
+            </div>
+            <div class="flex flex-col gap-6 text-white lg:items-center mb-10">
+                <a href="#">Product</a>
+                <a href="#">Services</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="flex flex-col gap-6  lg:items-center mt-10 mb-10">
+                <p class="text-white ">follow us</p>
+                <div class="flex gap-6 text-white">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
         </section>
     </footer>
 </body>
